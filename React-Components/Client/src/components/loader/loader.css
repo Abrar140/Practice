@@ -1,0 +1,18 @@
+.loader{
+    height: 100px;
+    width: 100px;
+    border: 8px solid red;
+    border-color: black black red;
+    border-radius: 50%;
+    animation: animations 2s linear infinite;
+
+}
+@keyframes animations {
+   from{
+rotate: 0deg;
+   }
+   to{
+rotate:360deg;
+   }
+    
+}

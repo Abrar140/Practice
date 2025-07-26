@@ -1,0 +1,12 @@
+.btn:before{
+    animation: rotate 2s infinite linear;
+    filter:blur(20px)
+}
+.btn{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    transition: all 0.18 ease;
+    backdrop-filter: blur(30px);
+    backface-visibility: hidden;
+}
