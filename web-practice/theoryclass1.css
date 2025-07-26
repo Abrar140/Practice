@@ -1,0 +1,22 @@
+tr td input{
+    text-align: center;
+    font-weight: bold;
+    color:blue;
+    padding: 100px;
+}
+*{
+background-color: blueviolet;
+color: white;
+}
+nav ol li{
+    list-style: none;
+    padding: 5px;
+    
+}
+nav ol{
+    display: flex;
+    border:2px solid red
+}
+.a{
+    color:rgb(236, 147, 13)
+}

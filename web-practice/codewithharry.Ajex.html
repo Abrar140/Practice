@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let promise1 = new Promise((resolve, reject) => {
+            let a= Math.random();
+            if(a>0.5){
+                reject("i cannot support random number ")
+            }
+            else{
+                setTimeout(() => {
+                console.log("i am done i am inside promise inside timeout")
+                resolve("harray is not hurry")
+            }, 3000);
+            }
+           
+        })
+        let promise2 = new Promise((resolve, reject) => {
+            let a= Math.random();
+            if(a>0.5){
+                reject("i cannot support random number 2 ")
+            }
+            else{
+                setTimeout(() => {
+                console.log("i am done i am inside promise inside timeout 2")
+                resolve("harray is not hurry 2")
+            }, 3000);
+            }
+           
+        })
+       let p3=Promise.all([promise1,promise2])
+       p3.then((a)=>{
+        console.log(a)
+        console.log(a)     
+ console.log(a)
+        }).catch((err)=>{
+            console.log(err)
+
+        })
+        /*all setele  reject + resolve   gives status  and value
+        .race   first   it may be accept or reject
+        .any  give result first get fullfilled  if not any get fullfied genrate error
+        .resolve ?????  
+        .REJECT ? */
+        /*promise1.then((a)=>{
+ console.log(a)
+        }).catch((err)=>{
+            console.log(err)
+
+        })*/
+        /* asyn means   heavy program at end*/
+        console.log("i am abrar")
+        setTimeout(() => {
+            console.log("i am inside timeout ")  
+        }, 2000);
+        console.log("i am at end ")
+ const callback=(arg) =>{
+    console.log(arg)
+    
+ }
+        const loadScript =(src, callback) => {
+            let sc=document.createElement("script")
+            sc.src=src;
+            sc.onload=callback("harray");
+            document.head.append(sc)
+
+        }
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback)
+    </script>
+    
+</body>
+</html>

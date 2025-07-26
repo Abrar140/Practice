@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div p{
+        background-color: yellowgreen;
+        width: 120px;
+        height: 50px;
+        display: inline;
+    }
+    div > p{
+        background-color: red;
+    }
+    div ~ p{
+        background-color: green;
+        max-width: 120px;
+        height: 50px;
+    }
+    div + p{
+        background-color: blue;
+    }
+    
+  section{
+    display: inline-block;
+    
+  }
+
+</style>
+<body>
+
+    <section>
+        i am section
+    </section>
+    <section>
+        i am section
+    </section>
+    <div>
+        <p>i am a p p i am p iam not here  i am a p p i am p iam not here i am a p p i am p iam not herei am a p p i am p iam not here</p>
+        <div>
+           <p>i am a p</p> i am p2
+        </div>
+        <section>
+            <p>i amalso a p</p>
+        </section>
+    </div>
+    
+    <p>iam after div</p>
+    <p>iam seeing u   i am a p p i am p iam not herei am a p p i am p iam not herei am a p p i am p iam not here</p>
+</body>
+</html>

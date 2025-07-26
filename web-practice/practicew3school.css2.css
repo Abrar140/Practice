@@ -1,0 +1,35 @@
+.grad h1{
+    text-shadow: 2px 2px red;
+}
+
+.grad{
+    background-image:  conic-gradient( rgb(125, 41, 198) , yellow, green);/*radial gradiant  linear */
+    height: 70vh;
+    width: 50vw;
+    box-shadow: 10px 10px;
+    overflow: hidden;
+    text-overflow: clip;
+    word-wrap: break-word;
+    writing-mode: vertical-rl;
+}
+.doubleimage{
+    background-image: url("/image.yt1.webp") , url("/abrarimage.png");
+    background-position: top left , bottom right;
+    background-repeat: no-repeat, repeat ;
+    background-size: 100px 80px , 200px ;
+    padding: 10px;
+   /* background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;*/
+}
+.rounded1{
+    border: 25px solid transparent;
+    width: 200px;
+    height: 150px;
+    border-image: url('/image.abrarimage.png')  100 stretch;/*  imaege slice  repeat*/
+}
+.rounded{
+    border: 25px dotted red;
+    border-radius: 25px 5px;
+    width: 200px;
+    height: 150px;
+  
+}

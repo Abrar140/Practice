@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+    <p id="demo"></p>
+    <script>
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myArr = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myArr[0];
+}
+xmlhttp.open("GET", "/w3schools.json.ex2.txt", true);
+xmlhttp.send();
+
+
+// const xmlhttp= new XMLHttpRequest();
+// xmlhttp.onload=function(){
+//     const myobj= JSON.parse(this.responseText);
+//     document.getElementById("demo").innerHTML = myobj.name;
+// }
+// xmlhttp.open("GET","/w3schools.json.ex1.txt")
+// xmlhttp.send();
+
+
+       const employesdata= {
+            "empolyes" : [
+                {"fname":"ali", "lname":"nawaz","birth":"22-03-3024"},
+                {"fname":"alia", "lname":"numair"},
+                {"fname":"aliza", "lname":"noroz"}
+             ] }
+             
+//              const obj = JSON.parse(text, function (key, value) {
+//              if (key == "birth") {
+//               return new Date(value);
+//            } else {
+//     return value;
+//   }
+// });
+             employesdata.empolyes.forEach(employes=>{
+                console.log(employes.fname)
+             })
+             const myJSON = JSON.stringify(employesdata);
+             console.log(myJSON)
+             //jSOn.parse(emp.....)   again to use fnme lname
+    </script>
+</body>
+</html>

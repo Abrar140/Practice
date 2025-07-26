@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="calls"></p>
+    <p class="callse"></p>
+    <p class="callings"></p>
+    <h1 class="asyns"></h1>
+    <p class="ang"></p>
+    <p class="asynawait"></p>
+    <p class="asynawait1"></p>
+    <script>
+        async function mydisplay(){
+            let prom= new Promise((resolve, reject) => {
+                resolve("i was resolved ")// apply set timeout also
+            })
+            document.querySelector(".asynawait1").innerHTML=await prom;
+        }
+        mydisplay();
+       
+console.log("------------------------------------------------------------------")
+async function myfunction(){
+    return "hello"
+}
+myfunction().then(
+    function (value){
+        display2(value)
+    },
+    function (error){
+        display2(error)
+    }
+)
+function display3(something){
+            document.querySelector(".asynawait").innerHTML=something;
+}
+console.log("------------------------------------------------------------------")
+        let promse = new Promise((resolve, reject) => {
+            let reqf = new XMLHttpRequest();
+            reqf.open('GET',"./codewithharry.navbar.html");
+            reqf.onload=function(){
+                if(reqf.status==200){
+                    resolve(reqf.response)
+                }
+                else{
+              reject("error file not found ")
+                }
+            }
+          
+            reqf.send();
+            
+        })
+       // document.querySelector(".ang").innerHTML=something; when use asyn we do ot need then and display function   here we use await
+
+promse.then(
+    function (value){
+        display1(value)
+    },
+    function (error){
+        display1(error)
+    }
+)
+
+function asadsda(){ 
+var a = 2;
+console.log("2");
+            }
+
+function display2(something){
+            document.querySelector(".ang").innerHTML=something;
+}
+    
+    console.log("------------------------------------------------------------------")
+    function getfile(callback){
+            let reqf = new XMLHttpRequest();
+            reqf.onload=function(){
+                if(reqf.status==200){
+                    callback(this.responseText)
+                }
+                else{
+   callback("error "+ reqf.status)
+                }
+            }
+            reqf.open('GET',"./codewithharry.navbar.html");
+            reqf.send();
+        }
+    
+      
+ 
+function display1(something){
+            document.querySelector(".callse").innerHTML=something;
+}
+getfile(display1); 
+console.log("------------------------------------------------------------------")
+        let prmse = new Promise((myresolve, myReject) => {
+            let x=0;
+            setTimeout(() => {
+                if (x == 0) {
+   myresolve("OK");
+  } else {
+    myReject("Error");
+  }
+            }, 3000);
+           
+        })
+        prmse.then(
+  function(value) {display(value);},
+  function(error) {display(error);}
+        )
+        setInterval(myout , 1000);
+function myout(){
+    let d=new Date();
+    document.querySelector(".asyns").innerHTML= d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()
+   
+}
+        const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+        const newnum= removeneg(myNumbers,(x)=> x>=0);
+      
+        document.querySelector(".callings").innerHTML = newnum;
+
+        function removeneg(arr,callback){
+            const arry=[];
+            for(const x of arr){
+                if(callback(x)){
+                    arry.push(x)
+                }
+            }
+            
+            return arry
+        }
+        function display(something){
+            document.querySelector(".calls").innerHTML=something;
+        }
+function mysum(a,b, callback){
+    let sum=a+b;
+    callback(sum)
+
+}
+mysum(7,8,display)
+    </script>
+</body>
+</html>

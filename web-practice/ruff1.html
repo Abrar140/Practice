@@ -1,0 +1,61 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store Products</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap.css">
+    <script src="/bootstrap.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<div class="container  bg-primary" id="card-container">
+    <!-- Product cards will be dynamically inserted here -->
+    <button class="btn btn-secondary p-3 m-3">  alinawaz</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Fetch data from the API and create cards
+        $.ajax({
+            url: 'https://fakestoreapi.com/products',
+            method: 'GET',
+            success: function(products) {
+                // Loop through each product
+                products.forEach(product => {
+                    // Create a product card
+                    var productCard = `
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-card">
+                                <h1>Product ID: ${product.id}</h1>
+                                <h2>Title: ${product.title}</h2>
+                                <p>Price: $${product.price}</p>
+                                <p>Category: ${product.category}</p>
+                                <p>Description: ${product.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    // Append the product card to the container
+                    $('#card-container').append(productCard);
+                });
+            },
+            error: function(error) {
+                console.error('Error fetching products:', error);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

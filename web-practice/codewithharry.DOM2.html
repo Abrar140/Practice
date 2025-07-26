@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="containor   redz bg-color " style="background-color: green;">
+        <div  data-createdby="abrar"class="box"> hey i am adiv box</div>
+        <div hidden class="box "> hey i am adiv box</div>
+        <b>i am bold1</b>
+        <i class="id1">i am italic with <b>i am cols with bold</b></i>
+        
+    </div>
+
+    <script>
+       document.querySelector(".box").innerHTML
+        document.querySelector(".containor").outerHTML  //  '<div class="containor">\n        <div class="box"> hey i am adiv box</div>\n        <div class="box"> hey i am adiv box</div>\n    </div>'
+        document.querySelector(".containor").innerText   //as a text     'hey i am adiv box\nhey i am adiv box'
+        document.querySelector(".containor").nodeName     //DIV' only tag
+document.querySelector(".containor").tagName //'DIV'// commands elemts etc
+document.querySelector(".containor").textContent // all text minus tags'\n         hey i am adiv box\n         hey i am adiv box\n    '
+document.querySelector(".containor").hidden // check hiiddency of elemnt
+document.querySelector(".containor")
+document.querySelector(".containor").getAttribute("style") //'background-color: green;'
+document.querySelector(".containor").setAttribute("style","background-color: purple;")  
+document.querySelector(".containor").attributes// return all attributes   NamedNodeMap {0: class, 1: style, class: class, style: style, length: 2}
+//document.querySelector(".containor").removeAttribute("style")
+document.designMode="on"// to edit website 
+document.querySelector(".box").dataset //DOMStringMap {createdby: 'abrar'}
+let insdiv = document.createElement("p")
+insdiv.innerHTML="i have been done"
+insdiv.setAttribute("class","p1")
+document.querySelector(".containor").append(insdiv)//prepend before after replace with
+let cont= document.querySelector(".containor")
+cont.insertAdjacentHTML("afterbegin","<b>i am bold1</b>")
+cont.insertAdjacentHTML("afterend","<b>i am bold2</b>")
+cont.insertAdjacentHTML("beforebegin","<b>i am bold3</b>")
+cont.insertAdjacentHTML("beforeend","<b>i am bold4</b>")
+var newele= document.createElement("i");
+newele.textContent="i am i"
+cont.insertAdjacentElement("beforeend",newele)
+cont.insertAdjacentText("afterbegin","i am ali i love you i am here to love my self           ")
+let ids= document.getElementById("id1")
+ids.remove()
+document.querySelector(".containor").classList  //DOMTokenList(3) ['containor', 'redz', 'bg-color', value: 'containor   redz bg-color ']
+document.querySelector(".containor").className //'containor   redz bg-color '
+document.querySelector(".containor").classList.add("abrar")// add a class  also remove
+
+document.querySelector(".containor").classList.toggle("abrar")// toggle means if yes then no if no then yes*/
+//nodename   h1 nodevalue value in h1  .childnode[0].nodevalue
+//Element Node - Represents an element (e.g., <div>, <p>, <span>) - Value: 1
+// Attribute Node - Represents an attribute of an element (e.g., class="example") - Value: 2
+// Text Node - Represents text within an element - Value: 3
+// Comment Node - Represents a comment in the HTML - Value: 8
+// Document Node - Represents the entire document - Value: 9
+// DocumentType Node - Represents the document type declaration (e.g., <!DOCTYPE html>) - Value: 10
+
+    </script>
+</body>
+</html>

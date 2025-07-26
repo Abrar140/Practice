@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let  animal={
+        //     eats: true 
+        // };
+        // let  rabbit={
+        //     jump: true 
+        // };
+        // rabbit.__proto__=animal;
+        class Animal{
+            constructor( name){
+                this.name=name;
+                console.log("inside constructor")
+
+            }
+            eats(){
+                console.log("kha raha hn")
+            }
+            jumps(){
+                console.log("jumping")
+            }
+        }
+        class loin extends Animal{
+            constructor(name){
+                super(name)
+                this.name=name
+                console.log("inside loin")
+            }
+
+        }
+        let loins=new loin("shero")
+        console.log(loins)
+        let elephant=new Animal("loin");
+        console.log(elephant)
+        console.log("e")
+        let a=prompt("enter first number")
+        let b=prompt("enter second number")
+        if(isNaN(a)||isNaN(b)){
+            throw SyntaxError("sorry not allowed")
+        }
+        try {
+            console.log((parseInt(a)+parseInt(b))*x)
+            
+        } catch (error) {
+            console.log("error agaya bahi")
+            console.log(error.name)
+            console.log(error.message)
+        }
+        finally{
+            // return ka bad finally also work
+        }
+        
+    </script>
+    
+</body>
+</html>

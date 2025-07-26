@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grand{
+        height: 500px;
+        width: 500px;
+        background-color: yellowgreen;
+        border: 2px solid red;
+    }
+    .father{
+        height: 250px;
+        width: 250px;
+        background-color: rgb(15, 12, 113);
+        border: 2px solid red;
+    }
+    .son{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(223, 173, 12);
+        border: 2px solid red;
+    }
+</style>
+<body>
+    <div class="containor">
+        <div class="item">
+            i am aitem box
+        </div>
+        <p class="para">i am p</p>
+    </div>
+    <div class="grand">
+        <section class="father">
+            <div class="son">
+                i am a son
+            </div>
+        </section>
+    </div>
+    <button id="btn">click me to change yourself</button>
+    <script>
+        document.querySelector(".grand").addEventListener("click",()=>{
+            alert("i was clicked  i am grand")
+        })
+        document.querySelector(".father").addEventListener("click",()=>{
+            alert("i was clicked  i am father")
+        })
+        document.querySelector(".son").addEventListener("click",(e)=>{
+            e.stopPropagation()
+            alert("i was clicked  i am son")
+        })
+        let btn1=document.getElementById("btn")
+        btn1.addEventListener("dblclick",()=>{
+            alert("i was clicked")
+        })
+        btn1.addEventListener("click",()=>{
+            document.querySelector(".item").innerHTML="i was double clicked"
+        })
+        btn1.addEventListener("contextmenu",()=>{
+            document.querySelector(".item").innerHTML+="Donot right click it "
+        })
+        document.addEventListener("keydown",(e)=>{
+            
+            document.querySelector(".para").innerHTML+=e.key +e.keyCode
+        })
+        function getrandomcolor(){
+  let a=Math.floor(Math.random() * (256 - 0)) + 0;
+  let b=Math.floor(Math.random() * (256 - 0)) + 0;
+  let c=Math.floor(Math.random() * (256 - 0)) + 0;
+  return 'rgb(' + a + ',' + b + ',' + c + ')';
+
+};
+       let a= setInterval(() => {
+            document.querySelector(".son").style.background=getrandomcolor()
+        }, 3000);
+        console.log(a)
+        // clear interval stops it
+
+        let b= setTimeout(() => {
+            document.querySelector(".father").style.background=getrandomcolor()
+        }, 3000);// just for 1 time
+    </script>
+</body>
+</html>

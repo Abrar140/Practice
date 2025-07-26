@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        border: 2px solid black;
+        display: flex;
+        width: 650px;
+        justify-content: center;
+        align-items: center;
+    }
+    .capsule{
+        position: absolute;
+        z-index: 10;
+        bottom: 264px;
+        right: 700px;
+        opacity: 0.9;
+        background-color: grey;
+    }
+    image{
+        position: relative;
+    }
+    </style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/FeBbjzVOeRU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA1Ur3-0IW8Rr0bXxfIdry68m5z9Q" alt="">
+                <div class="capsule">38:56</div>
+            </div>
+            <div class="text">
+                <h1>Welcome to our course of web dev</h1>
+                <p>code with abrar . 700k views . 3 months ago</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function createSecondCard() {
+   
+    var title = "Another Course Title";
+    var cname = "anotherinstructor";
+    var views = 3000000;
+    var monthold = 6;
+    var duration = "45:30";
+    var thumbnail = "https://i.ytimg.com/vi/FeBbjzVOeRU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA1Ur3-0IW8Rr0bXxfIdry68m5z9Q";
+
+    // Calculate viewstr
+    let viewstr = 0;
+    if (views > 1000 && views < 1000000) {
+        viewstr = views / 1000 + "K";
+    } else if (views > 1000000) {
+        viewstr = views / 1000000 + "M";
+    } else {
+        viewstr = views;
+    }
+
+    // Create card elements
+    var card = document.createElement("div");
+    card.classList.add("card");
+
+    var imageDiv = document.createElement("div");
+    imageDiv.classList.add("image");
+
+    var img = document.createElement("img");
+    img.src = thumbnail;
+    img.alt = "";
+
+    var capsuleDiv = document.createElement("div");
+    capsuleDiv.classList.add("capsule");
+    capsuleDiv.textContent = duration;
+
+    var textDiv = document.createElement("div");
+    textDiv.classList.add("text");
+
+    var h1 = document.createElement("h1");
+    h1.textContent = title;
+
+    var p = document.createElement("p");
+    p.textContent = `${cname} • ${viewstr} • ${monthold} months ago`;
+
+    // Assemble card elements
+    imageDiv.appendChild(img);
+    imageDiv.appendChild(capsuleDiv);
+    textDiv.appendChild(h1);
+    textDiv.appendChild(p);
+    card.appendChild(imageDiv);
+    card.appendChild(textDiv);
+
+    // Append the card to the container
+    var container = document.querySelector(".container");
+    container.appendChild(card);
+}
+
+// Call the function to create the second card
+createSecondCard();
+
+    </script>
+</body>
+</html>

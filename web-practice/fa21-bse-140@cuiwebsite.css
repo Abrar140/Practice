@@ -1,0 +1,51 @@
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: none;
+}
+.nav-link{
+color: rgb(83, 7, 83) ;
+font-size: 25px;
+float: right !important;
+}
+
+.nav-item :hover{
+background-color:  rgb(82, 35, 236) ;
+color: white;
+}
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+
+   
+}
+.nav-item{
+    float: right;
+}
+.divnav{
+    background-color: white;
+   
+  
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(83, 7, 83); /* Set background color here */
+    padding: 20px; /* Add padding to create space between items */
+  }
+  .item {
+    color: white;
+    flex: 0 0 calc(25% - 10px); /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center align text */
+  }
+  .item p {
+    margin: 0;
+  }

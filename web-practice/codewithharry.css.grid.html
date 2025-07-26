@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .containorbox{
+            border: 2px solid red;
+            height :50vh;
+            width: 80vw;
+         
+        }
+      .box1{
+        border: 2px solid purple;
+        height: 200px;
+        width: 200px;
+        transform: rotate(45deg);/* 0.5 turn =270 rotate
+        */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box2{
+        border: 2px solid rgb(97, 54, 213);
+        height: 200px;
+        width: 200px;
+        transform: scale(1.6)   skew(40deg)    translate(50%);/*skew , translate */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .containor3{
+            width: 80vw;
+            height: 75vh;
+            border: 3px solid rgb(223, 102, 16);
+            display: grid;
+            grid-template-columns: 2fr  repeat(3, minmax(150px,1fr));/*align content  use when containoor large*/
+            place-content: center;
+            gap: 34px;
+            align-items: center;
+            justify-content: center;
+        }
+        .item3{
+            border: 3px solid rgb(230, 8, 101);  
+            height: 40px;
+        }
+  .containor2 {
+            border: 2px solid rgb(31, 30, 132);
+            display: grid;
+            grid-template-areas: "nav nav nav" "side article article" "footer footer footer";
+        }
+        .items2 {
+            border: 3px solid rgb(20, 208, 57);  
+            height: 40px;
+        }
+        .item-a{
+           grid-area: nav;
+        }
+        .item-b{
+            grid-area: side;
+        }
+        .item-c{
+           grid-area: article;
+        }
+        .item-d{
+            grid-area: footer;
+        }
+        .item-f{
+            grid-area: nav;
+        }
+
+
+
+        .containor{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns:[pehla] 120px [dosra]100px [teesra];/* grid track between 2 horizontal or vertical   grid area between 2 horizontal and 2 vertical*/
+        /*..................[1][-3]
+        ..................[2] [-2]
+        ..................[3]
+        
+        */
+        grid-template-rows: 100px 120px 100px;
+        
+        
+        }
+        .items{
+            border: 3px solid red;
+            
+            height: 40px;
+        }
+        .item-4{/*if i use it for same other then it got overlapped*/
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+        .item-1{
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .item-6{
+            grid-column: doosra/teesra;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="containorbox">
+        <div class="box1">
+            box
+        </div>
+        <div class="box2">
+            box
+        </div>
+    </div>
+    <div class="containor3">
+       <div class="item3">1</div>
+       <div class="item3">2</div>
+       <div class="item3">3</div>
+       <div class="item3">4</div>
+       <div class="item3">5</div>
+    </div>
+    <div class="containor2">
+        <div class="items2 item-a">a</div>
+        <div class="items2 item-b ">b</div>
+        <div class="items2 item-c">c</div>
+        <div class="items2  item-d">d</div>
+        <div class="items2 ">e</div>
+        <div class="items2 item-f">f</div>
+        <div class="items2">g</div>
+    </div>
+    <div class="containor">
+        <div class="items item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items  item-4">4</div>
+        <div class="items">5</div>
+        <div class="items item-6">6</div>
+        <div class="items">7</div>
+    </div>
+
+  
+</body>
+</html>

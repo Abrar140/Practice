@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiD Lab exam</title>
+    <link rel="stylesheet" href="/bootstrap.css">
+    <script src="/bootstrap.js"></script>
+    <script src="/jQuery.js"></script>
+</head>
+<body>
+  
+
+<!-- Create a dropdown selection box for ID range 1 to 10. On change event send request AJAX xhttp request 
+using JQUERY to fetch data from the endpoint provided below. Update the content of a div with ID 
+“comments” accordingly.
+https://jsonplaceholder.typicode.com/comments?postId=[id -->
+
+<input type="text" id="inputField">
+<button id="addButton">AddButton</button>
+<div class="target">
+    <ul >
+        <li> "tea" </li>
+        <li>Coffee</li>
+        <li>juice</li>
+
+    </ul>
+</div>
+
+<label for="selecting">select post id</label>
+<select name="" id="selecting">
+    <option value="">select id</option>
+    
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select>
+<div id="comments"></div>
+
+
+<script>
+    document.getElementById('addButton').addEventListener('click', function() {
+        var inputValue = document.getElementById('inputField').value;
+        if (inputValue.trim() !== '') {
+                var newLi = document.createElement('li');
+                newLi.textContent = inputValue;
+              document.querySelector('.target ul').appendChild(newLi);
+            document.getElementById('inputField').value = '';
+        }
+        else{
+            console.log("no value here ")
+        }
+    });
+    $document.ready(function(){
+        $("#selecting").change(function(){
+            var idselected = $(this).val();
+            $.ajax({
+            url: "https://jsonplaceholder.typicode.com/comments" + selectedId,
+               method:"GET", 
+               success: function(data){
+       
+                var comments = "";
+                $.each(data, function(index, comment){
+                    comments += "<p><strong>Name:</strong> " + comment.name + "</p>";
+                    comments += "<p><strong>Email:</strong> " + comment.email + "</p>";
+                    comments += "<p><strong>Body:</strong> " + comment.body + "</p>";
+                    comments += "<hr>";
+                },
+               error : function(){
+                $("#comments").html("Failed to fetch comments.");
+               }
+            
+        });
+        
+    });
+              
+               
+    })
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+  
+
+
+
+
+
+ 

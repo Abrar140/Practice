@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .continoranimit{
+            background-color: #64be1f;
+          height: 50vh;
+         width: 30vh;
+        }
+        .itemanimit{
+        background-color: #d9df18;
+       height: 5vh;
+        width: 10vh;
+        /*animation-name: abrar;
+        animation-duration: 3s;
+        animation-iteration-count: 3;
+        animation-direction: reverse;
+       /* animation-play-state: paused;*/
+       animation: abrar  10s ease-in-out 1s 10 reverse forwards
+           , ani2 10s ease-in ;
+        }
+        @keyframes abrar {
+            from{
+          background-color: indianred;
+            }
+            to{
+                transform: translate(1000px);
+                background-color: fuchsia;
+            }
+            
+        }
+        @keyframes ani2 {
+            0%{ transform: rotate(100deg);}
+            20%{ transform: rotate(200deg);}
+            40%{ transform: rotate(300deg);}
+            60%{ transform: rotate(450deg);}
+            100%{ transform: rotate(270deg);}
+            
+        }
+        .containorobjfit{
+            border: 2px solid red;
+            width: 50vw;
+            height: 80vh;
+        }
+        .containorobjfit img{
+            width: 100px;
+            height: 140px;
+            object-fit: cover;/* cover the palce it cut image contain all image*/
+            object-position: top right;/*use in pixels tooo*/
+            filter: blur(1px) brightness(100%) contrast(50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="containorobjfit">
+        <img src="/image.yt1.webp" alt="">
+    </div>
+    <div class="continoranimit">
+        <div class="itemanimit">
+            animations
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p id="p1">i am p1</p>
+    <p>i am p2</p>
+    <p>i am p3</p>
+    <p id="m02">i am p4</p>
+    <p id="01">i am p5</p>
+    <p id="demo"></p>
+    <div id="03"><p>hey pakistan</p></div>
+    <button class="hidebtn">try me to hide button</button>
+    <input type="text" name="" id="">
+    <script>
+
+$(document).ready(function() {
+            var myElements = $("p");
+            $("#demo").text("The text in the first paragraph is: " + myElements[0].innerHTML);
+            var newmyele =$("#01")
+            newmyele.text("hey! i am here")
+            var newmyele2=$("#demo").text();
+            $("#m02").text(newmyele2)
+            $("#03").html("<p>hey pakistaniniz</p>");
+            $("#p1").hide();
+            $("#m02").css("background-color","red");
+            $("demo").remove();
+            $("button").mouseenter(function(){
+                $("p").hide(1000);/*toggle inverse*/
+                $("button").animate({"left": "250px"},"slow")
+            })
+            $("p#01").hover(function(){
+                alert("in my place you entered")
+            })
+        });
+       
+        $("input").focus(function(){
+  $("input").css("background-color", "#f1ff9f").slideDown(2000);
+  });
+  $("p").append("i am ali")
+  var txt2 = $("<p></p>").text("Text.");  
+      /*
+      $.get(URL,callback);
+      $.post(URL,data,callback);
+      $(document).ready(function(){
+  $("button").click(function(){$.post("demo_test_post.asp",{name: "Donald Duck",city: "Duckburg"},function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+         $("#div1").load("demo_test.txt");// read from file data
+      $("p").eq(3)   .first   .filter(".intro")  .not
+      .childern() sibling next nextall
+       $("div").find("span")
+      parent parents parenuntil 
+      .remove .empty
+      $(":button")	Selects all <button> elements and <input> elements of type="button"
+        $("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"
+         $("ul li:first")	Selects the first <li> element of the first <ul>	
+        $("ul li:first-child")	Selects the first <li> element of every <ul>
+        $("p").on("click", function(){
+  $(this).hide();
+  .fadein(), show , 3000    fadetoggle fadetopass opacity
+  .slidedown slide up
+  .html .slide
+
+   $("#w3s").attr({
+    "href" : "https://www.w3schools.com/jquery/",
+    "title" : "W3Schools jQuery Tutorial"
+  });
+
+});
+        
+        */
+
+    </script>
+</body>
+</html>

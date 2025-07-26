@@ -1,0 +1,403 @@
+
+a[target="_blank"]{/* use only attribute or with value   title~="flower"   that ontain word flower*/
+  background-color: yellowgreen;
+}
+/*class|="top"    class with eg top-ali or top-content etc
+class^="top"       class start with starting top 
+class$="test"       class end with name test 
+class*="te"           class contain letter te letter
+*/
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.drpimg {
+  position: relative;
+  display: inline-block;
+}
+
+.drpimgcnt {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.drpimg:hover .drpimgcnt {
+  display: block;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.drpbtn{
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+.drpdwncntnt{
+  display: none;
+  position: none;
+}
+.drpdwncntnt a{
+  color: black;
+  display: block;
+}
+
+.drpdwncntnt a:hover{
+  background-color: #f1f1f1;
+}
+
+.drpdwn:hover .drpdwncntnt{
+  display: block;
+  background-color: #3e8e41;
+}
+
+
+.drpdwncntnt {
+  right: 0;
+}
+
+
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdowncontent{
+  display: block;
+}
+.dropdowncontent{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* for table responsive overflow-x " auto
+   display:none  position ended
+   visibility : hidden same result in visibility position remains
+*/
+
+
+/*
+
+p :first-child   for first child of any parent
+*/
+
+
+
+
+input[type=text]:focus{
+  border: 4px solid red;
+}
+p::first-letter{
+  color: gold !important;
+  font-size:  100px;
+}
+.imagelayout{
+  margin: auto;
+  display: block;
+  opacity: 0.5;
+}
+
+div.a{
+display: inline;/* donot allow to set width and height same case for margins padding etc*/
+width:  calc(100%-100px);
+height: 100px;
+padding: 15px;
+border: 5px solid blue;  
+background-color: yellow; 
+}
+span.a{
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid rgb(204, 110, 33);    
+  background-color: rgb(16, 218, 77); 
+}
+span.b{
+  display: inline-block;
+  width:  calc(100%-100px);/*use max min function*/
+  height: 1000px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+
+.clearzz::after{
+  border:  5px solid red;
+  /*overflow: auto; fix overflow*/
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+.images{
+  float: right;
+ 
+}
+.div1 {
+  float: right;
+  padding: 10px;  
+  border: 3px solid #73AD21;
+  
+ 
+}
+
+.div2 {
+  padding: 10px;
+  border: 3px solid red;
+  clear: left;
+  /*it clears its left*/
+}
+.major{
+  position: relative;
+  background-color: aqua;
+  border: 5px solid blue;
+}
+.blackbox{
+  position: relative;
+  z-index: 1;
+  border: 5px solid black;
+  height: 100px;
+  margin: 30px;
+
+}
+.greenbox{
+  position: absolute;
+  z-index: 2; /* green box will be above black box */
+  background: lightgreen;
+  border: 5px solid green;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+
+}
+.greybox{
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  border: 5px solid grey;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+
+}
+/*z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) 
+and flex items (elements that are direct children of display: flex elements).*/
+
+/*
+position static no effect of margin border etc
+        realative    applies margin border etc
+      
+*/
+.stick{
+  position: sticky;
+  top: 0;
+  background-color: black;
+  color: white;
+}
+
+.relat{
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  /*  overflow: hidden;  only thoose thext within boundry
+  visble shows text
+  scroll add on both ends
+  verflow-wrap: break-word;
+  use overflow-x also
+  
+  */
+  overflow: auto;
+ 
+  border: 10px solid #ad2177;
+  z-index: -1;/* if something overllap in this case this div will b shifted to back*/
+}
+.absol{
+  /*specify place it take place in relative tag*/
+  position: absolute;
+  top: 180px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  color: yellow;
+  border: 10px solid #da1515;
+}
+.fixing{
+  border: 5px solid rgb(228, 43, 30);
+  position: fixed;
+}
+  
+  li::before {
+    counter-increment: section;
+    content: counters(section,".") " ";
+  }
+
+
+ol{
+counter-reset: round;
+list-style-type: none;
+}
+li::before{
+    counter-increment: round;
+    content: counters(round, ".")" ";
+}
+
+
+body {
+    counter-reset: section;
+  }
+  h1{
+    counter-reset: subsection;
+  }
+  h1::before {
+    counter-increment: section;
+    content: "Section " counter(section) ". ";
+  }
+  
+  h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+  }
+input[type= text] {
+    box-sizing: border-box;/* in this case width provided wiill include padding etc in it*/
+    width: 1000px;
+    padding: 5px;
+    border: 2px solid red;
+    background: white url('/search.png') no-repeat 10px 10px;
+  
+}
+textarea{
+    resize: vertical;/* user can resize it vertically*/
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+ul.ul1{
+   /* list-style-image: url('/flowers.mp4');*/
+    list-style-type: square;
+    list-style-position: inside;
+    background: pink;
+}
+ul.ul2{
+   list-style: square outside url('/image.youtube.png');
+ }
+.fnt1{
+    cursor: wait;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: italic;
+font-weight: bold;
+font-variant: initial;
+font-size: 30px;/* font-size: 0.875em; /* 14px/16=0.875em */
+background-color: yellow;
+}
+.fnt{
+    cursor: help;
+ font: italic small-caps bold 45px  ;
+  
+
+    background-color: indianred;
+
+}
+
+.bcimage{
+text-align: center;
+text-align-last: justify;/* last line aligment*/
+direction: rtl;
+unicode-bidi: bidi-override;
+/* verticallalign   aligment of image in text*/
+text-decoration-line: line-through;
+text-decoration-color: blue;
+text-decoration-style: dotted;
+text-decoration-thickness: 5px;
+text-transform: capitalize;
+text-indent: max(5px,10%) ;/*for first line*/
+letter-spacing: -2px;
+word-spacing: 10px;
+line-height: 2;
+white-space: nowrap;
+text-shadow: 2px 2px red ;
+
+    
+    color: yellow;
+    background-color: deepskyblue;
+    background-image: url('/yt2.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;
+
+    border-style: dotted dashed solid double;/* top right bottom left   
+                                        if i use 2 1st rep top bottom 2nd left right
+                                         if i use 3 1st left 2nd right left 3rd bottom      same foer width*/
+    border-width: 5px 10px;
+    border-color: red  black purple;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+   padding-left: 20px;
+    padding-top: 30px;
+    height: 100%;/* it take 100% of that blck not screeen*/
+    max-width: 1000px;/*  it is used to set max value of width if text greater than max width  it will be resizes*/
+    min-width: none;/* content is smaller tahn min width it will expand it to attain width*/
+    outline-style: double;
+    outline-width: 10px;
+    outline-color: palevioletred;
+}
+.bcimage2{
+ 
+    text-decoration: underline pink double 2px;
+    text-transform: lower;
+
+    /* both are same .bcimage and .bcimage2*/
+    background: red url('/yt1.webp') no-repeat scroll top center;
+    border: 10px solid lawngreen;
+    border-radius: 15px;
+    margin: auto;/* centered cz margin is auto as give bty this 30px 40px 50px*/
+    padding: 20px 30px;
+    width: 800px;
+    box-sizing: border-box;/* width is actually width + padding left + right so if we apply padding width will increase but if we use  boxsizing width= width no matter of padding*/
+outline: 10px dotted purple;
+}
+
+div >p{
+    /*used only for p under immidiate div*/
+    background-color: rgb(81, 0, 255);
+}
+div ~ p {
+    /*used only for p sibling of div*/
+    color: green;
+}
+div + p{
+     /*used only for p  direct after div*/
+    background-color: palevioletred;
+    opacity: 30%;
+}

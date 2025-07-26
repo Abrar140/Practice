@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+--color : red;
+--seccolr:rgb(246, 106, 106);
+        }
+       
+        @media only screen and (max-width: 500px){
+            body{
+                background-color: blueviolet;
+            }
+        }
+        .containor1{
+            border: 2px solid var(--seccolr);
+           
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+            align-items: center;
+            align-content: flex-start;/*for multiple lines*/
+            flex-direction: column;/*reverse when to in reverse order*/
+            /* on basis of flex direction  axies determin by default main axies   and y cross axies if we 
+            make  cloum then axies shift
+            
+            no justify item */
+            flex-wrap: wrap;
+            gap: 20px 30px;
+
+        }
+        .containor2 {
+            border: 2px solid var(--seccolr);
+            
+            display: flex;
+            height: 80vh;
+            flex-flow:  row  wrap; 
+            row-gap: 10px;  
+
+        }
+        .itemz1{
+            border: 2px solid  black;
+            background-color: var(--color);
+            height: 92px;
+            width: 92px;
+            margin: 5px;
+        }
+        .itemz2{
+            border: 2px solid  rgb(17, 225, 93);
+            background-color: var(--color);
+            height: 92px;
+            width: 92px;
+            margin: 5px;
+            flex-grow: 1;
+        }
+        .order-1{
+            order: 1;
+        }
+        .itemflexgrow{
+            flex-grow: 20;
+        }
+        .itemflexshrink{
+flex-shrink: 5;
+align-self: flex-end;
+
+        }
+        
+        .containortransition{
+            background-color: yellowgreen;
+            height: 30vh;
+            width: 50vw;
+        }
+        .transitionitem{
+            background-color: rgb(12, 36, 170);
+            height: 3vh;
+            width: 5vw;
+           /* transition-property: background-color ,transform;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0.23, 0.99, 0.2, -0.5);
+            transition-delay: 1s;*/
+            transition: all 3s ease-in-out 1s;
+        }
+        .translate{
+            transform: translateX(40%) translateY(50%);
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="containortransition">
+        <div class="transitionitem translate">
+
+        </div>
+    </div>
+<div class="containor1">
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+   <div class="itemz1"></div>
+</div>
+    
+<div class="containor2">
+   <div class="itemz2 order-1 " style="background-color: yellow;"></div>
+    <div class="itemz2 itemflexgrow "></div>
+    <div class="itemz2  itemflexshrink" style="background-color: brown;"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+    <div class="itemz2"></div>
+
+  
+</div>
+</body>
+</html>

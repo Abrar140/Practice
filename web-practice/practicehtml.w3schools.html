@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My practice Page</title>
+    <link rel="icon" type="image/png" href="/profile.png">
+   <!--<base href="https://www.w3schools.com/" target="_blank">  base set base here i set to w3school--> 
+        <style>
+        a:active{/* selected*/
+            color:yellowgreen
+        }
+        a:hover{/* mosue over it*/
+            color: red;
+        }
+        a:visited{/* visted           link unvisted*/
+            color: pink;
+        }
+        body{
+            background-image: url('/yt3.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: aqua;
+            background-size: cover;
+        }
+        tr , td{
+border: 2px solid blueviolet;
+border-radius: 10pz;
+border-collapse: collapse;
+padding: 20px;
+/* <link rel="stylesheet" href="mystyle.css">
+it is spacce  between a text and boundry*/
+        }
+        table{
+            border-spacing: 40px;
+            /*it is spacce  between a cells*/
+        }
+        tr:nth-child(even){
+            background-color: white;
+        }
+        li a:hover{
+            background-color: wheat;
+        }
+        #ul1{
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+overflow: hidden;
+background-color: black;
+        }
+         .nav{
+            float: left;
+            
+        }
+        li a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+       /* div.container
+        {
+            width: 100%;
+            overflow: auto;
+            
+        }
+        div.container div{
+            width: 33%;
+            float: left;
+        }*/
+        div.container{
+            display: grid;
+            grid-template-columns: 50% 25% 25%;
+        }
+        .allbrowser {
+    margin: 0;
+  padding: 5px;
+  background-color: lightgray;
+}
+
+.allbrowser > h1, .browser {
+  margin: 10px;
+  padding: 5px;
+}
+
+.browser {
+  background: white;
+}
+
+.browser > h2, p {
+  margin: 4px;
+  font-size: 90%;
+}
+
+/* figure   figurecaption*/
+
+
+
+    </style>
+</head>
+<body>
+    &gt;
+    &lt;
+    &reg;
+    &#128517;
+    str
+    <figure>
+        <img src="/image.yt2.webp" alt="">
+        <figcaption>youtube-2.2</figcaption>
+    </figure>
+    <a href="mailto : alinawaz@gmail.com"> email</a>
+    <article class="allbrowser">
+        <h1>main heading</h1>
+    
+    <article class="browser">
+        <h2>google Chrome</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Laboriosam deleniti voluptas in necessitatibus illum illo ut 
+             dolores provident vitae eius.\</p>
+    </article>
+    <article class="browser">
+        <h2>google Chrome</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Laboriosam deleniti voluptas in necessitatibus illum illo ut 
+             dolores provident vitae eius.\</p>
+    </article>
+    
+    </article>
+
+
+
+
+<canvas  width="200" height="100" style="border: 3px solid red;"></canvas>
+<br>
+    
+    <video width="320px" height="500px" controls autoplay muted>
+        <source src="/image.flowers.mp4" type="video/mp4">
+    </video>
+    <img src="images/stickman.gif" alt=" stickyman">
+<br>
+<button onclick="document.getElementById('demo').innerHTML=Date()"> click me to see</button>
+<noscript>no js available</noscript>
+<p id="demo"></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tyxswccv-VU?si=9EVGPiKhCZFowuml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ <form action="/actionpage.php" autocomplete="on" method="post">
+    <fieldset>
+        <legend>personal</legend>
+   
+    <label for="forname">forname</label>
+    <input type="text"> <br>
+    
+  <input type="hidden" id="custId" name="custId" value="3487"><br>
+  <label for=""> number</label>
+  <input type="number" min="1" max="10">
+    <label for="password">passwords</label>
+    <input type="password"> <br>
+    <label for="" value>select color</label>
+    <input type="color" value="red">
+    <label for="">dateplustime</label>
+    <input type="datetime-local"> <br>
+    <label for="">email</label>
+    <input type="email" name="" id=""><br>
+
+    <label for="">image</label>
+    <input type="image" name="" id=""><br>
+    <label for=""> file</label>
+    <input type="file">
+    <label for=""> birthday</label>
+    <input type="date" name="" id="" max="2024-02-24">
+    <input type="radio" id="html" name="fav" value="html">
+    <label for="html">Html</label><br>
+    <input type="radio" id="css" name="fav" value="css">
+    <label for="css">Css</label><br>
+    <input type="radio" id="js" name="fav" value="js">
+    <label for="javav Script">js</label><br>
+    <br>
+    <button onclick="alert('i am abrar')">Click on me</button>
+    <label for="choosecar"> choose car</label>
+    <select name="car" id="car" size="4" multiple>
+        <optgroup>sweedishcar</optgroup>
+        <option value="velo">velo</option>
+        <option value="start">start</option>
+        <optgroup>lavishcar</optgroup>
+        <option value="marsd">marsd</option>
+        <option value="kiln" selected>kiln</option>
+    </select>
+    <br>
+    
+    oninput =="x.value=parseInt(a.value)+parseInt(b.value)+"
+    0 <input type="range" id="a" name="a" value="a">100 +
+    <input type="number" id="b" name="b" value="50">
+    <output name="x" for="a b"></output>
+    
+    <br>
+
+    <input list="browsers">
+    <datalist id="browsers">
+        
+      <option value="Edge">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    
+    <br>
+    <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+    <input type="checkbox" id="html" name="fav1" value="html">
+    <label for="html">Html</label><br>
+    <input type="checkbox" id="css" name="fav2" value="css">
+    <label for="css">Css</label><br>
+    <input type="checkbox" id="js" name="fav3" value="js">
+    <label for="javav Script">js</label><br>
+    <input type="submit"  value="submit" id="">
+    <input type="reset" name="" id="">
+</fieldset>
+ </form>
+ <iframe src="/google.html" frameborder="0"></iframe>
+
+
+    <div class="container">
+
+    
+    <div  style="background-color: pink;">
+        <h1 class="zoo">i am Abrar</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+    </div>
+    <div style="background-color: red;">
+        <h1>i am Abrar</h1>
+        <p class="zoo">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+    </div>
+    <div style="background-color: tomato;">
+        <h1>i am Abrar</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+        <p class="zoo">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, libero.
+        </p>
+    </div>
+</div>
+<button onclick="myfunc()"> hide element</button>
+<script>
+    function myfunc(){
+        var x = document.getElementsByClassName("zoo");
+       
+        for (var i=0; i <x.length ; i++){
+            x[i].style.display ="none";
+            
+        }
+    }
+</script>
+    <ul id="ul1">
+        <li><a href="#home" class="nav">Home</a></li>
+        <li><a href="#about" class="nav">About us</a></li>
+        <li><a href="#contatus" class="nav">Contact us</a></li>
+    </ul>
+    <ol  type="i" start="50">
+        <li>coffr </li>
+        <li>tea</li>
+        <li>capacino</li>
+        <li>coffr </li>
+        <li>tea</li>
+        <li>capacino</li>
+    </ol>
+    <ul style="list-style-type: disc;">
+        <li>coffr </li>
+        <li>tea</li>
+        <li>capacino</li>
+        <li>coffr </li>
+        <li>tea</li>
+        <li>capacino</li> 
+    </ul>
+    <dl>
+        <dt>coffe</dt>
+        <dd>i am coffee</dd>
+        <dt>tea</dt>
+        <dd>i am tea</dd>
+    </dl>
+      <!-- i am comment    -->
+<table style="width: 100%;border: 3px solid red;">
+    <caption>montly rent</caption>
+    <colgroup>
+        <col span="2" style="background-color:rgb(255, 0, 170)">
+        <col style="background-color:yellow">
+      </colgroup>
+    <tr>
+        <th  colspan="2">name</th>
+        <th style="width: 65%;">contact</th>
+        <th>place</th>
+    </tr>
+    <tr>
+        <td>ali</td>
+        <td>0300</td>
+        <td>feroz</td>
+        <td>0300</td>
+    </tr>
+    <tr>
+        <td>ali</td>
+        <td>0300</td>
+        <td>feroz</td>
+        <td>0300</td>
+    </tr>
+    <tr>
+        <td>ali</td>
+        <td>0300</td>
+        <td>feroz</td>
+        <td rowspan="2">0300</td>
+    </tr>
+    <tr>
+        <td>ali</td>
+        <td>0300</td>
+        <td>feroz</td>
+        
+    </tr>
+</table>
+
+      <h1 style="font-family: 'Courier New', Courier, monospace; font-size: 500%; text-align: center;"> i am abar</h1>
+
+      <a href="/theoryclass.bootstrap.html" target="_blank">link of my site</a><!-- youu can write full link or half link  eg /html_images.asp-->
+      <a href="mailto: fa21-bse-140@cuilahore.edu.pk"> mail</a>
+    <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">html tuturiol</button>
+    <a href="#qtag"> i am going to q tag</a>
+    <a href="https://www.youtube.com/">
+        <img src="/imge.abrarimage.png" alt="also use image as a link" style="width: 500px; height: 600px; border: 3px solid red;">    
+    </a>
+    <picture>
+        <source media="(min-width : 650px)" srcset="/image.youtube.png">
+        <!--  diffrent images on diffrent medias -->
+
+    </picture>
+    
+
+    <br>
+    <br><br><br>
+    <br>
+    <br>
+    <br><br><br>
+    <br>
+    <br>
+    <br><br><br>
+    <br>
+    <br>
+    <br><br><br>
+    <br>
+
+
+    <b>i am abarar</b>
+    <strong>i am strong</strong>
+        <i>i am ittalic</i>
+        <em>i am emphasis</em>
+        <small>i am samalll</small>
+        <del>i am del</del>
+       <mark> i am mark</mark>
+       <ins>i am insert</ins>
+       <sub>i am subscript</sub>
+       <sup>i am superscript</sup>
+
+       <p>-------------------------------</p>
+       <blockquote>i am block quote</blockquote>
+       <q id="qtag">i am q tag</q>
+       <abbr title="world health organization">WHO</abbr>
+       <address>
+        iam new  new address <br>
+        i live in  feroz
+       </address>
+      <b>i am bold with  <cite>i am cite</cite></b> 
+      <bdo dir="rtl">i am bdo i am right to left</bdo>
+
+      <p>-------------------------------</p>
+    
+</body>
+</html>

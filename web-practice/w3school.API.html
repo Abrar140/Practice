@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>JavaScript Geolocation</h2>
+<p>Click the button to get your coordinates.</p>
+<button onclick="getLocation()">Try It</button>
+<input type="number" class="validinput" min="200" max="400" required>
+<button class="validinput" onclick="getValidInput()">OK</button>
+<p id="demo1"></p>
+<p id="demo"></p>
+<button onclick="histry()">history</button>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+
+
+let p= fetch("https://fakestoreapi.com/products")
+p.then((value1)=>{
+  console.log(value1.headers)
+  return value1.json()
+}).then((value2)=>{
+  console.log(value2[0].category)
+  value2[0].id=100
+  console.log(value2[0].id)
+  console.log(value2)
+})
+// spice(start, no of nodes)
+let w; // Define the worker globally
+
+function startWorker() {
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(w) == "undefined") {
+      w = new Worker("worker.js"); // Create a new worker
+      w.onmessage = function(event) {
+        document.getElementById("result").innerHTML = event.data;
+      };
+    }
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  if (typeof(w) != "undefined") {
+    w.terminate(); // Terminate the worker
+    w = undefined;
+  }
+}
+
+
+sessionStorage.setItem("name","John Doe");
+document.getElementById("demo1").innerHTML = sessionStorage.getItem("name");
+    function histry(){
+        window.history.back()//go(-2) go back to 2 pages
+    }
+function getValidInput() {
+
+    const input = document.querySelector(".validinput");
+    const demo = document.getElementById("demo");
+
+    if (!input.checkValidity()) { //.validity.rangeoverflow .range underflow
+        demo.innerHTML = input.validationMessage;
+    } else {
+        demo.innerHTML = "Valid OK";
+    }
+
+
+}
+ 
+
+
+const x = document.getElementById("demo");
+function getLocation() {
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } catch {
+    x.innerHTML = err;
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</body>
+</html>
+
+
+
+

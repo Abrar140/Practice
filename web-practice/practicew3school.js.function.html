@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form" onsubmit="return validateForm()">
+       name: <input type="text" name="inputs">
+       <input type="submit">
+    </form>
+    <script>
+function validateForm() {
+  let xs = document.forms["form"]["inputs"].value;
+  if (xs == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+const xv = document.forms["frm1"];
+//   document.write(Date());-------------override doc
+        function sum(a, b){
+            return a*b;
+        }
+        // store in variable
+      const x =  function (a,b){
+            return a * b;
+        }
+        let z=x(2,4)
+        console.log(z)
+        let s=sum(3,5).toString
+        console.log(s)
+//default value 
+    const x1 =(a,b=10)=> a*b;//returning value at own
+      
+    
+    console.log(x1(5))
+//         (function () {
+//             console.log("i am invoked i am a self invokin g function")
+// })();
+function product(...p) {
+    let sum=1;
+    for(let arg of p)
+    sum *= arg
+ return sum 
+    
+}
+console.log(product(1,2,3,4,5,6,7,8))
+
+const person={
+    fullname :function(city,country){
+        return this.firstname + this.lastname+ city+ country
+    }
+}
+const person1={
+    firstname:"abrar",
+    lastname:"amjad"
+}
+person.fullname.call(person1,"lhr","pkstn")
+person.fullname.apply(person1["lhr","pkstn"])
+// if person has its own fnam  and lname  you want to get name of p1 then use bind
+//Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+Math.max.apply(" ", [1,2,3]);
+        
+    </script>
+</body>
+</html>
